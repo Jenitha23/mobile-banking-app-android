@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.mobilebankingapp.TransferValidatorTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-20T01:35:45.461Z" hostname="JENI" time="0.024">
+  <properties/>
+  <testcase name="blank name is rejected" classname="com.example.mobilebankingapp.TransferValidatorTest" time="0.012"/>
+  <testcase name="negative amount is rejected" classname="com.example.mobilebankingapp.TransferValidatorTest" time="0.005"/>
+  <testcase name="non-numeric amount is rejected" classname="com.example.mobilebankingapp.TransferValidatorTest" time="0.0"/>
+  <testcase name="zero amount is rejected" classname="com.example.mobilebankingapp.TransferValidatorTest" time="0.0"/>
+  <testcase name="blank account is rejected" classname="com.example.mobilebankingapp.TransferValidatorTest" time="0.0"/>
+  <testcase name="valid input passes" classname="com.example.mobilebankingapp.TransferValidatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

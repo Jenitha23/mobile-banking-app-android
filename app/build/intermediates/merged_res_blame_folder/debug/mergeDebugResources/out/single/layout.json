@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.example.mobilebankingapp-mergeDebugResources-43:/layout/activity_main.xml",
+        "source": "com.example.mobilebankingapp-main-46:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.mobilebankingapp-mergeDebugResources-43:/layout/fragment_transfer.xml",
+        "source": "com.example.mobilebankingapp-main-46:/layout/fragment_transfer.xml"
+    },
+    {
+        "merged": "com.example.mobilebankingapp-mergeDebugResources-43:/layout/fragment_success.xml",
+        "source": "com.example.mobilebankingapp-main-46:/layout/fragment_success.xml"
+    },
+    {
+        "merged": "com.example.mobilebankingapp-mergeDebugResources-43:/layout/fragment_dashboard.xml",
+        "source": "com.example.mobilebankingapp-main-46:/layout/fragment_dashboard.xml"
+    },
+    {
+        "merged": "com.example.mobilebankingapp-mergeDebugResources-43:/layout/fragment_confirmation.xml",
+        "source": "com.example.mobilebankingapp-main-46:/layout/fragment_confirmation.xml"
+    },
+    {
+        "merged": "com.example.mobilebankingapp-mergeDebugResources-43:/layout/activity_login.xml",
+        "source": "com.example.mobilebankingapp-main-46:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.mobilebankingapp-mergeDebugResources-43:/layout/fragment_history.xml",
+        "source": "com.example.mobilebankingapp-main-46:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "com.example.mobilebankingapp-mergeDebugResources-43:/layout/fragment_login.xml",
+        "source": "com.example.mobilebankingapp-main-46:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.example.mobilebankingapp-mergeDebugResources-43:/layout/item_transfer_history.xml",
+        "source": "com.example.mobilebankingapp-main-46:/layout/item_transfer_history.xml"
+    }
+]

@@ -1,0 +1,28 @@
+EXECUTING: C:\Users\ASUS\AppData\Local\Android\Sdk\build-tools\36.0.0\aapt.exe dump badging C:\Users\ASUS\Downloads\MobileBankingApp_Lab08\MobileBankingApp\MobileBankingApp\app\build\intermediates\apk\androidTest\debug\app-debug-androidTest.apk
+CURRENT_WORKING_DIRECTORY: C:\Users\ASUS\Downloads\MobileBankingApp_Lab08\MobileBankingApp\MobileBankingApp
+START_TIME: 2026-09-19 22:43:05.786
+START_TIME-NANOS: 2026-09-19 22:43:05.786602500
+ENVIRONMENT:
+
+*****************************************
+STDOUT/STDERR BELOW
+===================
+package: name='com.example.mobilebankingapp.test' versionCode='' versionName='' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'
+sdkVersion:'24'
+targetSdkVersion:'36'
+uses-permission: name='android.permission.REORDER_TASKS'
+application: label='' icon=''
+application-debuggable
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+other-activities
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--'
+densities: '160'
+===================
+END_TIME: 2026-09-19 22:43:05.822
+END_TIME-NANOS: 2026-09-19 22:43:05.822932800
+DURATION: 36ms
+EXIT CODE: 0

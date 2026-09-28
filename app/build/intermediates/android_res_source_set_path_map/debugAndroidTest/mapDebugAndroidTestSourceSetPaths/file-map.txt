@@ -1,0 +1,5 @@
+com.example.mobilebankingapp.test.app-updated_navigation_xml-0 C:\Users\ASUS\Downloads\MobileBankingApp_Lab08\MobileBankingApp\MobileBankingApp\app\build\generated\updated_navigation_xml\debugAndroidTest
+com.example.mobilebankingapp.test.app-packageDebugAndroidTestResources-1 C:\Users\ASUS\Downloads\MobileBankingApp_Lab08\MobileBankingApp\MobileBankingApp\app\build\intermediates\incremental\debugAndroidTest\packageDebugAndroidTestResources\merged.dir
+com.example.mobilebankingapp.test.app-packageDebugAndroidTestResources-2 C:\Users\ASUS\Downloads\MobileBankingApp_Lab08\MobileBankingApp\MobileBankingApp\app\build\intermediates\incremental\debugAndroidTest\packageDebugAndroidTestResources\stripped.dir
+com.example.mobilebankingapp.test.app-debugAndroidTest-3 C:\Users\ASUS\Downloads\MobileBankingApp_Lab08\MobileBankingApp\MobileBankingApp\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
+gradleHome-0 C:\Users\ASUS\.gradle

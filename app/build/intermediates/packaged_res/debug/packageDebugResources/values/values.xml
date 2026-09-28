@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_chip">#EDF2FB</color>
+    <color name="bg_input">#F1F4F8</color>
+    <color name="bg_screen">#F5F7FA</color>
+    <color name="black">#FF000000</color>
+    <color name="border_light">#E3E8EF</color>
+    <color name="brand_primary">#1B4F9C</color>
+    <color name="brand_primary_dark">#123A75</color>
+    <color name="brand_primary_light">#5B8DD9</color>
+    <color name="danger">#E14848</color>
+    <color name="success">#22A559</color>
+    <color name="success_light">#E3F6EA</color>
+    <color name="text_hint">#A0AAB4</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_on_primary_muted">#CBDDF7</color>
+    <color name="text_primary">#1A2530</color>
+    <color name="text_secondary">#6C7A89</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">MobileBankingApp</string>
+    <style name="Base.Theme.MobileBankingApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorPrimaryVariant">@color/brand_primary_dark</item>
+        <item name="colorOnPrimary">@color/text_on_primary</item>
+        <item name="colorSecondary">@color/brand_primary</item>
+        <item name="android:windowBackground">@color/bg_screen</item>
+        <item name="android:statusBarColor">@color/brand_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="Theme.MobileBankingApp" parent="Base.Theme.MobileBankingApp"/>
+</resources>

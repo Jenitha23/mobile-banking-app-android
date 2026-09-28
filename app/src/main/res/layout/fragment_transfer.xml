@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/bg_screen">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <!-- Top bar: back arrow doubles as Cancel -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:background="@android:color/transparent"
+                app:icon="@drawable/ic_arrow_back"
+                app:iconTint="@color/text_primary"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="22dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Recipient Name -->
+
+            <TextView
+                android:id="@+id/tvTransferHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Fund Transfer"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/btnCancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/btnCancel"
+                app:layout_constraintTop_toTopOf="@id/btnCancel"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/lblRecipientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recipient Name"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                app:layout_constraintTop_toBottomOf="@id/btnCancel"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="24dp" />
+
+            <FrameLayout
+                android:id="@+id/fieldRecipientName"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_input_field"
+                app:layout_constraintTop_toBottomOf="@id/lblRecipientName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_person"
+                    app:tint="@color/text_hint" />
+
+                <!-- Challenge Exercise: AutoCompleteTextView so we can suggest
+                     names from the device's contact list as the user types. -->
+                <AutoCompleteTextView
+                    android:id="@+id/etRecipientName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter recipient name"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp"
+                    android:inputType="textPersonName"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="48dp"
+                    android:paddingEnd="16dp"
+                    android:completionThreshold="1"
+                    android:dropDownWidth="match_parent"
+                    android:popupBackground="@drawable/bg_card_white" />
+            </FrameLayout>
+
+            <!-- Account Number -->
+            <TextView
+                android:id="@+id/lblRecipientAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Number"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                app:layout_constraintTop_toBottomOf="@id/fieldRecipientName"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp" />
+
+            <FrameLayout
+                android:id="@+id/fieldRecipientAccount"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_input_field"
+                app:layout_constraintTop_toBottomOf="@id/lblRecipientAccount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_card"
+                    app:tint="@color/text_hint" />
+
+                <EditText
+                    android:id="@+id/etRecipientAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter account number"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="48dp"
+                    android:paddingEnd="16dp" />
+            </FrameLayout>
+
+            <!-- Bank (visual only) -->
+            <TextView
+                android:id="@+id/lblBank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                app:layout_constraintTop_toBottomOf="@id/fieldRecipientAccount"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp" />
+
+            <FrameLayout
+                android:id="@+id/fieldBank"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_input_field"
+                app:layout_constraintTop_toBottomOf="@id/lblBank"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_bank"
+                    app:tint="@color/text_hint" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/etBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:hint="Select bank"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="48dp"
+                    android:paddingEnd="40dp"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:dropDownWidth="match_parent"
+                    android:completionThreshold="1"
+                    android:popupBackground="@drawable/bg_card_white" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="16dp"
+                    android:rotation="90"
+                    android:src="@drawable/ic_arrow_forward"
+                    app:tint="@color/text_hint" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvBankError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select a bank"
+                android:textSize="11sp"
+                android:textColor="@color/danger"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/fieldBank"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="4dp" />
+
+            <!-- Amount -->
+            <TextView
+                android:id="@+id/lblAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount (LKR)"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                app:layout_constraintTop_toBottomOf="@id/fieldBank"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="18dp" />
+
+            <FrameLayout
+                android:id="@+id/fieldAmount"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_input_field"
+                app:layout_constraintTop_toBottomOf="@id/lblAmount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:text="LKR"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/etAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter amount"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="52dp"
+                    android:paddingEnd="16dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvAmountHelper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maximum LKR 500,000.00 per transfer"
+                android:textSize="11sp"
+                android:textColor="@color/text_hint"
+                app:layout_constraintTop_toBottomOf="@id/fieldAmount"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="6dp" />
+
+            <!-- Note -->
+            <TextView
+                android:id="@+id/lblRemarks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Note (Optional)"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                app:layout_constraintTop_toBottomOf="@id/tvAmountHelper"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="12dp" />
+
+            <FrameLayout
+                android:id="@+id/fieldRemarks"
+                android:layout_width="0dp"
+                android:layout_height="88dp"
+                android:background="@drawable/bg_input_field"
+                app:layout_constraintTop_toBottomOf="@id/lblRemarks"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/etRemarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:hint="Enter note (optional)"
+                    android:inputType="text|textMultiLine"
+                    android:padding="16dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="15sp" />
+            </FrameLayout>
+
+            <!-- Continue button -->
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="64dp"
+                android:background="@color/btn_primary_background"
+                android:elevation="0dp"
+                android:letterSpacing="0.03"
+                android:text="CONTINUE"
+                android:textColor="@color/text_on_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fieldRemarks" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
